@@ -6,16 +6,13 @@ from modules import data_training
 def apply_old_money_style():
     st.markdown("""
     <style>
-        .main {
+        .main, .stApp {
             background-color: #f5f3e9;
             color: #2c3639;
         }
-        .stApp {
-            background-color: #f5f3e9;
-        }
-        h1, h2, h3 {
+        h1, h2, h3, h4, h5 {
             font-family: 'Libre Baskerville', serif;
-            font-color: #954535;
+            color: #2c3639;
         }
         .css-18e3th9 {
             padding: 3rem 5rem;
@@ -32,42 +29,44 @@ def apply_old_money_style():
         .stButton>button:hover {
             background-color: #475657;
         }
-        .stDataFrame {
-            border: 1px solid #d1c9b0;
+        .stDataFrame, .stTable {
+            color: #2c3639;
+            background-color: #ffffff;
         }
         .stSelectbox > div > div, .stMultiSelect > div > div {
-            background-color: #f5f3e9;
+            background-color: #ffffff;
             border: 1px solid #d1c9b0;
             border-radius: 0;
+            color: #2c3639;
         }
-        .sidebar .css-1d391kg {
+        .sidebar .css-1d391kg, .sidebar .css-18e3th9 {
             background-color: #e8e4d5;
         }
-        .sidebar .css-18e3th9 {
-            padding: 2.5rem 1rem;
+        .metrics-container, .brand-card {
+            background-color: #ffffff;
+            color: #2c3639;
+            padding: 1.5rem;
+            border: 1px solid #d1c9b0;
+            margin-bottom: 2rem;
+        }
+        table {
+            color: #2c3639;
         }
         footer {
             border-top: 1px solid #d1c9b0;
             padding-top: 1rem;
             font-family: 'Libre Baskerville', serif;
             font-size: 0.8rem;
+            color: #6b705c;
         }
-        .metrics-container {
-            background-color: #ffffff;
-            padding: 1.5rem;
-            border: 1px solid #d1c9b0;
-            margin-bottom: 2rem;
-        }
-        .brand-card {
-            background-color: #ffffff;
-            padding: 2rem;
-            border: 1px solid #d1c9b0;
-            margin-bottom: 1.5rem;
+        /* Fixing default text opacity */
+        p, span, div {
+            color: #2c3639 !important;
         }
     </style>
-    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
     """, unsafe_allow_html=True)
+
 
 # Train the model when the app starts
 model, data = data_training.run_training()
