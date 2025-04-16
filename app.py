@@ -6,65 +6,86 @@ from modules import data_training
 def apply_old_money_style():
     st.markdown("""
     <style>
+        /* Base styles */
         .main, .stApp {
-            background-color: #f5f3e9;
-            color: #2c3639;
+            background-color: #e9e5d8;
+            color: #1e1e1e;
+            font-family: 'Libre Baskerville', serif;
         }
+
+        /* Headings */
         h1, h2, h3, h4, h5 {
-            font-family: 'Libre Baskerville', serif;
-            color: #2c3639;
+            color: #1e1e1e;
+            font-weight: 600;
         }
-        .css-18e3th9 {
-            padding: 3rem 5rem;
+
+        /* General Text */
+        p, span, div, label {
+            color: #1e1e1e !important;
         }
+
+        /* Buttons */
         .stButton>button {
-            background-color: #2c3639;
-            color: #f5f3e9;
-            border-radius: 0;
+            background-color: #3e3f3a;
+            color: #f9f6ef;
+            border-radius: 6px;
             font-family: 'Libre Baskerville', serif;
+            padding: 0.5rem 1.5rem;
             border: none;
-            padding: 0.5rem 2rem;
-            transition: all 0.3s;
+            transition: background-color 0.3s ease;
         }
         .stButton>button:hover {
-            background-color: #475657;
+            background-color: #5a5b54;
         }
-        .stDataFrame, .stTable {
-            color: #2c3639;
+
+        /* Tables */
+        .stDataFrame, .stTable, table {
             background-color: #ffffff;
+            color: #1e1e1e;
+            border: 1px solid #cfc8b2;
+            border-radius: 8px;
+            padding: 1rem;
         }
-        .stSelectbox > div > div, .stMultiSelect > div > div {
-            background-color: #ffffff;
-            border: 1px solid #d1c9b0;
-            border-radius: 0;
-            color: #2c3639;
-        }
+
+        /* Sidebar */
         .sidebar .css-1d391kg, .sidebar .css-18e3th9 {
-            background-color: #e8e4d5;
+            background-color: #d7d2c0;
+            color: #1e1e1e;
         }
-        .metrics-container, .brand-card {
+
+        /* Dropdowns and inputs */
+        .stSelectbox > div > div, .stMultiSelect > div > div, input {
             background-color: #ffffff;
-            color: #2c3639;
-            padding: 1.5rem;
-            border: 1px solid #d1c9b0;
-            margin-bottom: 2rem;
+            color: #1e1e1e;
+            border: 1px solid #cfc8b2;
+            border-radius: 4px;
         }
-        table {
-            color: #2c3639;
+
+        /* Metric cards */
+        .metrics-container, .brand-card {
+            background-color: #fefefe;
+            border: 1px solid #cfc8b2;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            margin-bottom: 1rem;
         }
+
+        /* Footer */
         footer {
-            border-top: 1px solid #d1c9b0;
-            padding-top: 1rem;
-            font-family: 'Libre Baskerville', serif;
+            color: #5a5b54;
             font-size: 0.8rem;
-            color: #6b705c;
+            border-top: 1px solid #cfc8b2;
+            padding-top: 1rem;
+            margin-top: 2rem;
         }
-        /* Fixing default text opacity */
-        p, span, div {
-            color: #2c3639 !important;
+
+        /* Optional accent */
+        .accent {
+            color: #395144;
         }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     """, unsafe_allow_html=True)
 
 
