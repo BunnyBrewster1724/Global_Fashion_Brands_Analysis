@@ -26,7 +26,7 @@ def apply_old_money_style():
 
         /* Buttons */
         .stButton>button {
-            background-color: #3e3f3a;
+            background-color: #C19A6B;
             color: #f9f6ef;
             border-radius: 6px;
             font-family: 'Libre Baskerville', serif;
